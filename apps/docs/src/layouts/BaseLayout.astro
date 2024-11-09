@@ -7,8 +7,9 @@ const { pageTitle } = Astro.props;
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:,">
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 </head>
@@ -17,8 +18,5 @@ const { pageTitle } = Astro.props;
 <h1>{pageTitle}</h1>
 <slot />
 <Footer />
-<script>
-    import "../scripts/menu.js";
-</script>
 </body>
 </html>
