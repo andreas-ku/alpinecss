@@ -97,7 +97,7 @@ footer {
     font-size: 90%;
 }
 code {
-    /*background-color: #000;*/
+    background-color: #000;
     color: #f1f1f1;
     border-radius: 0.2rem;
     padding: 0.1rem;
@@ -108,4 +108,7 @@ pre:has(code) {
     color: #f1f1f1;
     padding: 0.5rem;
     border-radius: 0.5rem;
+}
+pre code {
+    background-color: inherit;
 }
