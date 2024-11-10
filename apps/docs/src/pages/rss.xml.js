@@ -2,8 +2,8 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
 export async function GET(context) {
     return rss({
-        title: 'AlpineCSS | Blog',
-        description: 'Updates about AlpineCSS',
+        title: 'Alpine.css | Blog',
+        description: 'Updates about Alpine.css',
         site: context.site,
         items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
         customData: `<language>en-us</language>`,
