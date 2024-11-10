@@ -23,6 +23,8 @@ jobs:
               path: apps/docs
               package-manager: npm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
               # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
+      - name: Run accessibility tests
+        run: npm run test:accessibility
 #  deploy:
 #    needs: build
 #    runs-on: ubuntu-latest
