@@ -1,10 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-let allPosts = [];
-try {
-    allPosts = await Astro.glob('./updates/*.md');
-} catch (error) {}
-const pageTitle = "Updates";
+const allPosts = await Astro.glob('./updates/*.md');
+const pageTitle = "Demo";
 ---
 <BaseLayout pageTitle={pageTitle}>
 <ul>

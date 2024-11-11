@@ -4,7 +4,7 @@ const pageTitle = 'Alpine.css';
 const allPosts = await Astro.glob('./updates/*.md');
 ---
 <BaseLayout pageTitle={pageTitle}>
-    Alpine.css is a minimal stylesheet for mostly text-based websites.
+    Alpine.css is a <i>minimal</i> stylesheet for mostly text-based websites.
 
     <h2>Features</h2>
 
@@ -16,7 +16,11 @@ const allPosts = await Astro.glob('./updates/*.md');
 
     <h2>Demo</h2>
 
-    <p>Checkout the <a href="/updates/000-demo">demo page</a> or see it being used in a <a href="/updates/000-example_blog_post">sample blog post</a>.</p>
+    <ul>
+        {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
+
+    <!--<p>Checkout the <a href="/demo">demo page</a> or see it being used in a <a href="/updates/000-example_blog_post">sample blog post</a>.</p>-->
 
     <h2>Installation</h2>
 
@@ -34,10 +38,8 @@ const allPosts = await Astro.glob('./updates/*.md');
         <dd>CSS tool for fluid responsive design</dd>
     </dl>
 
-    <h2>Latest updates</h2>
+    <!--<h2>Latest updates</h2>-->
 
-    <!--<ul>-->
-    <!--    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}-->
-    <!--</ul>-->
+
 </BaseLayout>
 

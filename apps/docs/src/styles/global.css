@@ -24,15 +24,16 @@ body {
     max-width: 55ch;
     padding: 0 10px 10px;
 }
-h1{font-size:1.4em;margin-top:1em;}
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+:is(h1) {
+    font-size:1.4em;margin-top:1em;
+}
+
+:is(h2, h3, h4, h5, h6){
     font-size: 1.15em;
     margin: 2em 0 0;
 }
+
 blockquote {
     border-left: 4px solid;
     margin: 2em 0 2em 2em;
@@ -45,6 +46,7 @@ blockquote p {
 }
 img {
     max-width: 100%;
+    height: auto;
 }
 pre {
     border: 1px solid;
@@ -111,4 +113,5 @@ pre:has(code) {
 }
 pre code {
     background-color: inherit;
+    padding: 0;
 }
