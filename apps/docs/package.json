@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:accessibility": "./scripts/pa11y.sh"
+    "test:a11y": "./scripts/pa11y.sh --dev",
+    "test:a11y:ci": "./scripts/pa11y.sh"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.9",

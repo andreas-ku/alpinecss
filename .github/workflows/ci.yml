@@ -17,19 +17,15 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
+      - name: Install and build
         uses: withastro/action@v3
         with:
               path: apps/docs
               package-manager: npm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
               # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Accessibility testing
         id: a11y
-        run: npm run test:accessibility
+        run: npm run test:a11y:ci
 
 #  deploy:
 #    needs: build
