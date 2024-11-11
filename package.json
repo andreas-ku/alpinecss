@@ -5,8 +5,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "test:a11y": "turbo run test:a11y",
-    "test:a11y:ci": "turbo run test:a11y:ci"
+    "test:a11y": "turbo test:a11y",
+    "test:a11y:ci": "turbo test:a11y:ci"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
