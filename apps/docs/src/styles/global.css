@@ -86,8 +86,15 @@ footer {
 code {
     background-color: #000;
     color: #f1f1f1;
+}
+code, mark, kbd {
     border-radius: 0.2rem;
     padding: 0.1rem;
+}
+kbd {
+    border: 1px solid;
+    border-bottom: 3px solid;
+    padding: 0.1rem 0.5rem;
 }
 pre:has(code) {
     border: 2px solid #f9f9f9;

@@ -6,10 +6,11 @@ pubDate: 2024-11-11
 
 ## Typography
 
-This is a paragraph with **bold**, _italic_, <u>underlined</u>, <mark>highlighted</mark> text and a keyboard
-input: <kbd>Alt+F4</kbd>.
+This is a paragraph with **bold**, _italic_, <u>underlined</u> and <mark>highlighted text</mark>.
 
-And a blockquote:
+Here is another paragraph with a keyboard input: <kbd>Alt+F4</kbd>.
+
+And a here is a blockquote:
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >
