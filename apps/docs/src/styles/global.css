@@ -75,6 +75,9 @@ header a:last-of-type {
     display: block;
     font-size: 90%;
 }
+a {
+    color: inherit;
+}
 nav {
     margin: 1em 0;
 }
