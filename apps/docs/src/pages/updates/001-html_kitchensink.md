@@ -60,8 +60,6 @@ body {
 }
 ```
 
-Syntax-highlighting is not part of Alpine.css (here done by [Shiki](https://shiki.style/) using the dark-plus theme).
-
 ## Images
 
 Here is an example of an image with and without a caption:
