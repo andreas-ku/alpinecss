@@ -5,7 +5,7 @@ paths=(
   "/demo"
   "/follow"
   "/updates/001-html_kitchensink"
-  "/updates/002-example_blog_post"
+  "/updates/002-a_blogpost_demo"
 )
 
 if [[ "$1" == "--dev" ]]; then
