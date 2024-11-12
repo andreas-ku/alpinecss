@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: 'A Journey Through Lorem Ipsum: A blogpost demo'
+title: 'A blogpost demo'
 pubDate: 2024-11-11
 ---
 
