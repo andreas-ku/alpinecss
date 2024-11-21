@@ -4,7 +4,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint --filter=alpinecss",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css}\"",
+    "format:check": "prettier --list-different \"**/*.{ts,tsx,md,css}\"",
     "test:a11y": "turbo test:a11y",
     "test:a11y:ci": "turbo test:a11y:ci"
   },

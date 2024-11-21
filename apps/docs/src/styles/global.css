@@ -1,109 +1,116 @@
 body {
-    font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-    line-height: 1.5; /* https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html */
-    font-size: clamp(1.15rem, 1.063rem + 0.4348vw, 1.4rem); /* @link https://utopia.fyi/type/calculator?c=320,18.4,1.2,1240,22.4,1.25,0,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-    margin: 0 auto;
-    max-width: 60ch; /* 45-90 characters (https://practicaltypography.com/line-length.html) */
-    padding: 0 1.5rem 1.5rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052,
+    serif;
+  line-height: 1.5; /* https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html */
+  font-size: clamp(
+    1.15rem,
+    1.063rem + 0.4348vw,
+    1.4rem
+  ); /* @link https://utopia.fyi/type/calculator?c=320,18.4,1.2,1240,22.4,1.25,0,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  margin: 0 auto;
+  max-width: 60ch; /* 45-90 characters (https://practicaltypography.com/line-length.html) */
+  padding: 0 1.5rem 1.5rem;
 }
 :is(h1) {
-    font-size:1.4em;
-    margin-top:1em;
+  font-size: 1.4em;
+  margin-top: 1em;
 }
 :is(h2, h3, h4, h5, h6) {
-    font-size: 1.15em;
-    margin: 2em 0 0;
-    font-style: italic;
+  font-size: 1.15em;
+  margin: 2em 0 0;
+  font-style: italic;
 }
 blockquote {
-    border-left: 4px solid;
-    margin: 2em 0 2em 2em;
-    padding: 2px 8px;
+  border-left: 4px solid;
+  margin: 2em 0 2em 2em;
+  padding: 2px 8px;
 }
 blockquote p {
-    font-style: italic;
-    margin: 0;
-    padding: 0;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
 }
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 pre {
-    border: 1px solid;
-    white-space: pre-wrap;
-    padding: 5px;
+  border: 1px solid;
+  white-space: pre-wrap;
+  padding: 5px;
 }
 table {
-    text-align: left;
-    width: 100%;
+  text-align: left;
+  width: 100%;
 }
 header {
-    border-bottom: 1px solid;
-    padding: 0.75em 0;
+  border-bottom: 1px solid;
+  padding: 0.75em 0;
 }
 header a:last-of-type {
-    float: right;
+  float: right;
 }
 .posts {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .posts li {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 .posts li span {
-    display: block;
-    font-size: 90%;
+  display: block;
+  font-size: 90%;
 }
 a {
-    /* Don't remove underlines: https://www.w3.org/TR/WCAG20-TECHS/F73.html */
-    color: inherit;
+  /* Don't remove underlines: https://www.w3.org/TR/WCAG20-TECHS/F73.html */
+  color: inherit;
 }
 nav {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 nav a {
-    display: inline-block;
-    margin-right: 0.5em;
+  display: inline-block;
+  margin-right: 0.5em;
 }
 figure {
-    margin: 3em 0;
+  margin: 3em 0;
 }
 figure img {
-    width: 100%;
+  width: 100%;
 }
 figcaption {
-    font-size: 90%;
+  font-size: 90%;
 }
 footer {
-    border-top: 1px solid;
-    margin: 2em 0;
+  border-top: 1px solid;
+  margin: 2em 0;
 }
 .footnotes {
-    font-size: 90%;
+  font-size: 90%;
 }
 code {
-    background-color: #000;
-    color: #f1f1f1;
+  background-color: #000;
+  color: #f1f1f1;
 }
-code, mark, kbd {
-    border-radius: 0.2rem;
-    padding: 0.1rem;
+code,
+mark,
+kbd {
+  border-radius: 0.2rem;
+  padding: 0.1rem;
 }
 kbd {
-    border: 1px solid;
-    border-bottom: 3px solid;
-    padding: 0.1rem 0.5rem;
+  border: 1px solid;
+  border-bottom: 3px solid;
+  padding: 0.1rem 0.5rem;
 }
 pre:has(code) {
-    border: 2px solid #f9f9f9;
-    background-color: #000;
-    color: #f1f1f1;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+  border: 2px solid #f9f9f9;
+  background-color: #000;
+  color: #f1f1f1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 pre code {
-    background-color: inherit;
-    padding: 0;
+  background-color: inherit;
+  padding: 0;
 }

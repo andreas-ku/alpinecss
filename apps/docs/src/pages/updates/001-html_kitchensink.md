@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: 'HTML kitchensink'
+title: "HTML kitchensink"
 pubDate: 2024-11-11
 ---
 
@@ -13,7 +13,6 @@ Here is another paragraph with a keyboard input: <kbd>Alt+F4</kbd>.
 And a here is a blockquote:
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
->
 >
 > <cite>– Someone</cite>
 
@@ -56,8 +55,8 @@ This is a code block:
 
 ```css
 body {
-    line-height: 1.5;
-    margin: 0;
+  line-height: 1.5;
+  margin: 0;
 }
 ```
 
@@ -87,7 +86,7 @@ This is an HTML-only accordion:
 Here is how a table looks like:
 
 | Name  | Number |
-|-------|--------|
+| ----- | ------ |
 | Lorem | 123456 |
 | Ipsum | 234567 |
 | Dolor | 345678 |
@@ -122,21 +121,21 @@ The main content should start with a h1 headline.
 
 ```html
 <header id="demo-header">
-    <a href="/">Home</a>
-    <a href="#demo-menu">Menu ↓</a>
+  <a href="/">Home</a>
+  <a href="#demo-menu">Menu ↓</a>
 </header>
 <main>
-    <h1>Main headline</h1>
-    <p>Content goes here</p>
+  <h1>Main headline</h1>
+  <p>Content goes here</p>
 </main>
 <footer>
-    <nav id="demo-menu">
-        <a href="/">Home</a>
-        <a href="/demo">Demo</a>
-        <a href="/updates">Updates</a>
-        <a href="/follow">Follow</a>
-        <a href="#demo-header">↑ Top of the page</a>
-    </nav>
+  <nav id="demo-menu">
+    <a href="/">Home</a>
+    <a href="/demo">Demo</a>
+    <a href="/updates">Updates</a>
+    <a href="/follow">Follow</a>
+    <a href="#demo-header">↑ Top of the page</a>
+  </nav>
 </footer>
 ```
 

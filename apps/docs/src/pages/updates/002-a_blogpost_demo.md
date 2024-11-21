@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: 'A blogpost demo'
+title: "A blogpost demo"
 pubDate: 2024-11-11
 ---
 
 ## Lorem Ipsum Dolor
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula metus in erat fermentum, ac dapibus justo auctor. *Suspendisse potenti.*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula metus in erat fermentum, ac dapibus justo auctor. _Suspendisse potenti._
 
 Curabitur sit amet:
 
@@ -42,8 +42,7 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
 
 ## Conclusio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. *Fusce nec tellus sed augue semper porta.* Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. _Fusce nec tellus sed augue semper porta._ Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
 
 ## References
 
