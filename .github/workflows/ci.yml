@@ -15,6 +15,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
       - name: Check code formatting
         run: npm run format:check
   build:
