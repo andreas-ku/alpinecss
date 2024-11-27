@@ -8,6 +8,10 @@ import { defineConfig, devices } from "@playwright/test";
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
+const viewport = { width: 1280, height: 800 };
+const deviceScaleFactor = 2;
+const locale = "en-us";
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -36,17 +40,32 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport,
+        deviceScaleFactor,
+        locale,
+      },
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: {
+        ...devices["Desktop Firefox"],
+        viewport,
+        deviceScaleFactor,
+        locale,
+      },
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      use: {
+        ...devices["Desktop Safari"],
+        viewport,
+        deviceScaleFactor,
+        locale,
+      },
     },
 
     /* Test against mobile viewports. */
