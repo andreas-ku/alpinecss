@@ -12,6 +12,8 @@
       "persistent": true
     },
     "test:a11y": {},
-    "test:a11y:ci": {}
+    "test:a11y:ci": {},
+    "test:visual_regression": {},
+    "test:visual_regression:update": {}
   }
 }

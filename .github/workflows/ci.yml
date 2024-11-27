@@ -17,16 +17,31 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+
       - name: Install dependencies
         run: npm ci
+
       - name: Check code formatting
         run: npm run format:check
+
       - name: Build
         run: npm run build
+
       - name: Install Pa11y globally
         run: npm install -g pa11y
       - name: Accessibility testing
         run: npm run test:a11y:ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npm run playwright test --reporter=html
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
 
 #  deploy:
 #    needs: build

@@ -10,11 +10,17 @@
     "preview": "astro preview",
     "astro": "astro",
     "test:a11y": "./scripts/pa11y.sh --dev",
-    "test:a11y:ci": "./scripts/pa11y.sh"
+    "test:a11y:ci": "./scripts/pa11y.sh",
+    "test:visual_regression": "playwright test --reporter=html",
+    "test:visual_regression:update": "npx playwright test --update-snapshots"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.9",
     "@repo/ui": "*",
     "astro": "^4.16.10"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0"
   }
 }
