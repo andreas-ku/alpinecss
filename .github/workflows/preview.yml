@@ -7,8 +7,6 @@ on:
       - reopened
       - synchronize
       - closed
-env:
-  GITHUB_PROJECT_NAME: alpinecss
 
 jobs:
   build:
@@ -36,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo "BASE=$GITHUB_PROJECT_NAME/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
+      - run: echo "BASE=alpinecss/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
       - run: echo "BASE is $BASE"
         env:
           BASE: ${{ env.BASE }}
