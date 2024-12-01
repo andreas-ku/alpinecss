@@ -3,12 +3,18 @@ on:
   push:
     branches:
       - main
+env:
+  GITHUB_PROJECT_NAME: 'alpinecss'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
+      - run: npm ci
+      - run: npm run build
+        env:
+          BASE: ${{ GITHUB_PROJECT_NAME }}
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .
