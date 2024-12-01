@@ -1,15 +1,14 @@
-name: Deploy to GitHub Pages
-
+name: Deploy PR previews
+concurrency: preview-${{ github.ref }}
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+env:
+  GITHUB_PROJECT_NAME: alpinecss
 
 jobs:
   build:
@@ -31,6 +30,27 @@ jobs:
         run: npm install -g pa11y
       - name: Accessibility testing
         run: npm run test:a11y:ci
+
+  deploy-preview:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "BASE=$GITHUB_PROJECT_NAME/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
+      - run: echo "BASE is $BASE"
+        env:
+          BASE: ${{ env.BASE }}
+      - run: npm ci
+      - run: npm run build
+        env:
+          BASE: ${{ env.BASE }}
+        if: github.event.action != 'closed'
+      - uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./apps/docs/dist
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: auto
 
 #  visual-regression:
 #    runs-on: ubuntu-latest
@@ -56,14 +76,3 @@ jobs:
 #          name: playwright-report
 #          path: playwright-report/
 #          retention-days: 30
-
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
-#    steps:
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v4
