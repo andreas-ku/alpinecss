@@ -36,7 +36,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "BASE=pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
-      - run: npm ci && npm run build
+      - run: echo "BASE is $BASE"
+        env:
+          BASE: ${{ env.BASE }}
+      - run: npm ci
+      - run: npm run build
         env:
           BASE: ${{ env.BASE }}
         if: github.event.action != 'closed'
