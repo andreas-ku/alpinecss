@@ -6,11 +6,10 @@ on:
       - opened
       - reopened
       - synchronize
-      - closed
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
@@ -35,9 +34,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "BASE=alpinecss/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
-      - run: echo "BASE is $BASE"
-        env:
-          BASE: ${{ env.BASE }}
       - run: npm ci
       - run: npm run build
         env:
