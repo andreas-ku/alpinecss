@@ -14,7 +14,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          BASE: ${{ GITHUB_PROJECT_NAME }}
+          BASE: $GITHUB_PROJECT_NAME
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .
