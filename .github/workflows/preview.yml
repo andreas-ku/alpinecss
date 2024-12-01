@@ -51,6 +51,7 @@ jobs:
           action: auto
 
   visual-regression:
+    needs: deploy-preview
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.49.0-noble
