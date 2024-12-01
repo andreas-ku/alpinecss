@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "astro dev --base ${PUBLIC_BASE:=}",
+    "dev": "astro dev --base ${BASE:=}",
     "start": "astro dev",
-    "build": "astro build  --base ${PUBLIC_BASE:=}",
+    "build": "astro build  --base ${BASE:=}",
     "preview": "astro preview",
     "astro": "astro",
     "test:a11y": "./scripts/pa11y.sh --dev",
