@@ -17,7 +17,7 @@ jobs:
           BASE: $GITHUB_PROJECT_NAME
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: ./apps/docs/dist
           branch: gh-pages
           clean-exclude: pr-preview
           force: false
