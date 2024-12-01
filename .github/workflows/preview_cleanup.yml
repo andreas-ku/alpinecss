@@ -6,9 +6,6 @@ on:
       - closed
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
