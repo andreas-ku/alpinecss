@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://alpinecss.github.io',
-    base: 'alpinecss',
     markdown: {
         syntaxHighlight: false, // 'shiki' | 'prism' | false
         shikiConfig: {
