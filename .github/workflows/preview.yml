@@ -35,6 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: echo "BASE_URL=pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
       - run: npm ci && npm run build
         if: github.event.action != 'closed'
       - uses: rossjrw/pr-preview-action@v1
