@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-env:
-  GITHUB_PROJECT_NAME: alpinecss
 
 jobs:
   deploy:
@@ -14,7 +12,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          BASE: $GITHUB_PROJECT_NAME
+          BASE: alpinecss
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./apps/docs/dist
