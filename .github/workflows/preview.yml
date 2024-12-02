@@ -11,34 +11,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: npm ci
-
+      - uses: actions/checkout@v4
       - name: Check code formatting
         run: npm run format:check
-
-      - name: Build
-        run: npm run build
-
-      - name: Install Pa11y globally
-        run: npm install -g pa11y
-      - name: Accessibility testing
-        run: npm run test:a11y:ci
-
-  deploy-preview:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
       - run: echo "BASE=alpinecss/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
       - run: npm ci
       - run: npm run build
         env:
           BASE: ${{ env.BASE }}
-        if: github.event.action != 'closed'
+      - run: npm install -g pa11y
+      - run: npm run test:a11y:ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: .
+
+  deploy-preview:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: my-artifact
+          path: .
       - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./apps/docs/dist
