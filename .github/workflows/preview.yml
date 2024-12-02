@@ -41,7 +41,7 @@ jobs:
           umbrella-dir: pr-preview
           action: auto
 
-  test-visual-a11y:
+  test-a11y:
     needs: deploy-preview
     runs-on: ubuntu-latest
     defaults:
