@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
 
-const baseUrl = "http://localhost:4321/";
+const baseUrl = process.env.BASE_URL
+  ? process.env.BASE_URL
+  : "http://localhost:4321/";
 
 test.describe("Visual regression", () => {
   test("/", async ({ page }) => {
