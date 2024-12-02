@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check code formatting
-        run: npm run format:check
       - run: echo "BASE=alpinecss/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
       - run: npm ci
+      - name: Check code formatting
+        run: npm run format:check
       - run: npm run build
         env:
           BASE: ${{ env.BASE }}
