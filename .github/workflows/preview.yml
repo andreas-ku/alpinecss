@@ -24,7 +24,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: .
+          path: ./apps/docs/dist
 
   deploy-preview:
     needs: build
@@ -34,9 +34,10 @@ jobs:
         with:
           name: my-artifact
           path: .
+      - run: ls -R
       - uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./apps/docs/dist
+          source-dir: .
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
