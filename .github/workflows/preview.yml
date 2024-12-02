@@ -56,10 +56,11 @@ jobs:
 
       - uses: docker/setup-buildx-action@v2
 
-      - name: Run the tests
-        run: npm run test:visual_regression:ci
+      - run: npm run test:visual_regression:build
         env:
           BASE_URL: ${{ env.BASE_URL }}
+
+      - run: npm run test:visual_regression:run
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}

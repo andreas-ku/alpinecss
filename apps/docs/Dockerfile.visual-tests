@@ -15,6 +15,3 @@ RUN npm install @playwright/test
 
 # Install Playwright browsers
 RUN npx playwright install --with-deps
-
-# Default command for Playwright
-CMD ["npx", "playwright", "test"]
