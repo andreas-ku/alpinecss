@@ -8,10 +8,9 @@
     "format:check": "prettier --list-different \"**/*.{ts,tsx,md,css}\"",
     "test:a11y": "turbo test:a11y",
     "test:a11y:ci": "turbo test:a11y:ci",
-    "test:visual_regression": "turbo test:visual_regression",
-    "test:visual_regression:ci": "turbo test:visual_regression:ci",
-    "test:visual_regression:update": "turbo test:visual_regression:update",
-    "test:visual_regression:update:ci": "turbo test:visual_regression:update:ci"
+    "test:visual_regression:build": "BASE_URL=${BASE_URL} turbo test:visual_regression:build",
+    "test:visual_regression:run": "BASE_URL=${BASE_URL} turbo test:visual_regression:run",
+    "test:visual_regression:update": "BASE_URL=${BASE_URL} turbo test:visual_regression:update"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
