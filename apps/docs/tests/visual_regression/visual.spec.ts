@@ -3,7 +3,6 @@ import { test, expect } from "@playwright/test";
 const baseUrl = process.env.BASE_URL
   ? process.env.BASE_URL
   : "http://localhost:4321/";
-console.log(baseUrl);
 
 test.describe("Visual regression", () => {
   test("/", async ({ page }) => {
