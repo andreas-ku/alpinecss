@@ -52,7 +52,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: docs
-          path: ./dist
+          path: ./apps/docs/dist
       - run: npm install -g pa11y
       - run: npm run test:a11y:ci
 
