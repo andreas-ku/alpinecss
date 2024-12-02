@@ -13,7 +13,7 @@
     "test:a11y:ci": "./scripts/pa11y.sh",
     "test:visual_regression": "playwright test --reporter=html",
     "test:visual_regression:ci": "BASE_URL=${BASE_URL} playwright test --reporter=html",
-    "test:visual_regression:update": "npx playwright test --update-snapshots"
+    "test:visual_regression:update": "npx playwright test --update-snapshots",
     "test:visual_regression:update:ci": "BASE_URL=${BASE_URL} npx playwright test --update-snapshots"
   },
   "dependencies": {
