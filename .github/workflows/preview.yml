@@ -62,7 +62,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run the tests
-        run: npx playwright test
+        run: npm run test:visual_regression:ci
         env:
           BASE_URL: ${{ env.BASE_URL }}
 

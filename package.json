@@ -9,7 +9,9 @@
     "test:a11y": "turbo test:a11y",
     "test:a11y:ci": "turbo test:a11y:ci",
     "test:visual_regression": "turbo test:visual_regression",
-    "test:visual_regression:update": "turbo test:visual_regression:update"
+    "test:visual_regression:ci": "turbo test:visual_regression",
+    "test:visual_regression:update": "turbo test:visual_regression:update",
+    "test:visual_regression:update:ci": "turbo test:visual_regression:update"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
