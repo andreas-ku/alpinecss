@@ -1,6 +1,10 @@
 # Use the official Playwright Docker image
 FROM mcr.microsoft.com/playwright:v1.49.0-noble
 
+ARG BASE_URL
+
+ENV BASE_URL=$BASE_URL
+
 # Set the working directory inside the container
 WORKDIR /app
 
