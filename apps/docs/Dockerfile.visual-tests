@@ -1,1 +1,16 @@
-from: mcr.microsoft.com/playwright:v1.49.0-noble
+# Use the official Playwright Docker image
+FROM mcr.microsoft.com/playwright:v1.49.0-noble
+
+# Set the working directory inside the container
+WORKDIR /app
+
+COPY playwright.config.ts .
+
+RUN npm init -y
+RUN npm install @playwright/test
+
+# Install Playwright browsers
+RUN npx playwright install --with-deps
+
+# Default command for Playwright
+CMD ["npx", "playwright", "test", "--reporter=html"]
