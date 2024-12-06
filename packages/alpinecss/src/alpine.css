@@ -1,5 +1,5 @@
 body {
-  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052,
+  font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", "P052",
     serif;
   line-height: 1.5; /* https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html */
   font-size: clamp(
