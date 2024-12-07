@@ -75,20 +75,6 @@ header a:last-of-type {
   float: right;
 }
 
-.posts {
-  list-style: none;
-  padding: 0;
-}
-
-.posts li {
-  margin-bottom: 0.5em;
-}
-
-.posts li span {
-  display: block;
-  font-size: 90%;
-}
-
 figure {
   margin: 3em 0;
 }
