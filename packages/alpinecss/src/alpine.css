@@ -45,12 +45,6 @@ img {
   height: auto;
 }
 
-pre {
-  border: 1px solid;
-  white-space: pre-wrap;
-  padding: 5px;
-}
-
 table {
   text-align: left;
   width: 100%;
@@ -115,9 +109,7 @@ kbd {
 }
 
 pre:has(code) {
-  border: 2px solid #f9f9f9;
   background-color: #000;
-  color: #f1f1f1;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
