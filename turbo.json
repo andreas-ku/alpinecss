@@ -7,13 +7,14 @@
       "outputs": ["dist/**"],
       "env": ["BASE"]
     },
-    "lint": {},
-    "lint:fix": {},
+    "checkFilesize": {},
     "dev": {
       "cache": false,
       "persistent": true,
       "env": ["BASE"]
     },
+    "lint": {},
+    "lint:fix": {},
     "test:a11y": {},
     "test:a11y:ci": {},
     "test:visual_regression:build": {
