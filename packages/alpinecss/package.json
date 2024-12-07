@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "lightningcss --minify --bundle --targets \">= 0.25%\" src/alpine.css -o dist/alpine.min.css",
-    "checkFilesize": "npm run build && ./scripts/checkFilesize.sh",
+    "filesize": "./scripts/filesize.sh",
     "lint": "stylelint \"src/*.css\"",
     "lint:fix": "stylelint \"src/*.css\" --fix"
   },

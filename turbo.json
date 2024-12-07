@@ -7,12 +7,12 @@
       "outputs": ["dist/**"],
       "env": ["BASE"]
     },
-    "checkFilesize": {},
     "dev": {
       "cache": false,
       "persistent": true,
       "env": ["BASE"]
     },
+    "filesize": {},
     "lint": {},
     "lint:fix": {},
     "test:a11y": {},

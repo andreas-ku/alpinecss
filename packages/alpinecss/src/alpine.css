@@ -13,12 +13,16 @@ body {
   padding: 0 1.5rem 1.5rem;
 }
 
-:is(h1) {
+h1 {
   font-size: 1.4em;
   margin-top: 1em;
 }
 
-:is(h2, h3, h4, h5, h6) {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1.15em;
   margin: 2em 0 0;
   font-style: italic;
@@ -39,12 +43,6 @@ blockquote p {
 img {
   max-width: 100%;
   height: auto;
-}
-
-pre {
-  border: 1px solid;
-  white-space: pre-wrap;
-  padding: 5px;
 }
 
 table {
@@ -111,14 +109,11 @@ kbd {
 }
 
 pre:has(code) {
-  border: 2px solid #f9f9f9;
   background-color: #000;
-  color: #f1f1f1;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
 pre code {
-  background-color: inherit;
   padding: 0;
 }
