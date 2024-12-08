@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "BASE=alpinecss/pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
+      - run: echo "BASE=pr-preview/pr-${{ github.event.number }}" >> "$GITHUB_ENV"
       - run: npm ci
       - run: npm run format:check
       - run: npm run lint
@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: echo "BASE_URL=https://andreas-ku.github.io/alpinecss/pr-preview/pr-${{ github.event.number }}/" >> "$GITHUB_ENV"
+      - run: echo "BASE_URL=https://alpinecss.com/pr-preview/pr-${{ github.event.number }}/" >> "$GITHUB_ENV"
 
       - uses: docker/setup-buildx-action@v2
 
