@@ -11,8 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm ci
       - run: npm run build
-        env:
-          BASE: alpinecss
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./apps/docs/dist
